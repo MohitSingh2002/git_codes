@@ -1,0 +1,1 @@
+This is a simple project for creating REST API with Node.js and MongoDB.
