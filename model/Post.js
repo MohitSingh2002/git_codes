@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const user_schema = mongoose.Schema({
+const post_schema = mongoose.Schema({
     uid: {
         type: String,
     },
@@ -25,12 +25,21 @@ const user_schema = mongoose.Schema({
     college: {
         type: String,
     },
-    posts: [{
+    githubPost: {
+        type: String,
+    },
+    language: {
+        type: String,
+    },
+    description: {
+        type: String,
+    },
+    user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Post",
-    }],
+        ref: "User",
+    },
 }, {
     timestamps: true
 });
 
-module.exports = mongoose.model("User", user_schema);
+module.exports = mongoose.model("Post", post_schema);

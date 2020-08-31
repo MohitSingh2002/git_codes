@@ -7,6 +7,7 @@ require("./mongo");
 
 //Model
 require("./model/User");
+require("./model/Post");
 
 //Middleware
 app.use(bodyParser.json());
